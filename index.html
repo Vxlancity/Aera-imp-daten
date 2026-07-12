@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AeraCraft — Minecraft Netzwerk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"></span>
+      AeraCraft
+    </a>
+    <ul class="nav-links">
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+      <li><a href="impressum.html">Impressum</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="status-pill">
+        <span class="dot"></span>
+        Netzwerk online
+      </div>
+      <h1>Willkommen bei <span>AeraCraft</span></h1>
+      <p>Unser Minecraft-Netzwerk — hier findest du alle rechtlichen Informationen zu Datenschutz und Betreiber auf einen Blick.</p>
+
+      <div class="connect">
+        <span class="connect-ip">play.aeracraft.de<span class="cursor"></span></span>
+        <button class="copy-btn" id="copyBtn" type="button">IP kopieren</button>
+      </div>
+
+      <div class="legal-teasers">
+        <a href="datenschutz.html" class="teaser">
+          <span class="eyebrow">01 · Rechtliches</span>
+          <h3>Datenschutzerklärung</h3>
+          <p>Welche Daten wir beim Spielen erheben, warum, und wie du sie löschen lassen kannst.</p>
+          <span class="arrow">Ansehen →</span>
+        </a>
+        <a href="impressum.html" class="teaser">
+          <span class="eyebrow">02 · Rechtliches</span>
+          <h3>Impressum</h3>
+          <p>Angaben zum Betreiber gemäß § 5 DDG sowie unsere Kontakt- und Service-Zeiten.</p>
+          <span class="arrow">Ansehen →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-row">
+    <span>© 2026 AeraCraft — Ein privates Minecraft-Netzwerk.</span>
+    <span>
+      <a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  const copyBtn = document.getElementById('copyBtn');
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText('play.aeracraft.de').then(() => {
+      const original = copyBtn.textContent;
+      copyBtn.textContent = 'Kopiert!';
+      setTimeout(() => { copyBtn.textContent = original; }, 1600);
+    });
+  });
+</script>
+
+</body>
+</html>
