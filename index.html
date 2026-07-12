@@ -69,7 +69,7 @@
 <script>
   const copyBtn = document.getElementById('copyBtn');
   copyBtn.addEventListener('click', () => {
-    navigator.clipboard.writeText('play.aeracraft.de').then(() => {
+    navigator.clipboard.writeText('aeracraft.de').then(() => {
       const original = copyBtn.textContent;
       copyBtn.textContent = 'Kopiert!';
       setTimeout(() => { copyBtn.textContent = original; }, 1600);
